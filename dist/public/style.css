@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+body{
+    font-family: 'EB Garamond', serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    
+}
+
+#church_logo{
+    grid-column: 2/3;
+    max-width: 400px;
+    justify-self: center;
+
+}
+
+#ward_title{
+    /* font-family: 'EB Garamond', serif; */
+    font-size: 45px;
+    grid-column: 2/3;
+    justify-self: center;
+    margin-bottom: 0px;
+}
+
+#weekly_bulletin{
+    font-size: 38px;
+    grid-column: 2/3;
+    justify-self: center;
+    margin-top:0px;
+    
+}
+
+
+
+hr{
+    grid-column: 2/3;
+    /* height:1px; */
+    border-top: 1px solid black;
+    /* background-color: black; */
+    
+    width: 100%;
+    
+
+}
+
+.sacrament_assignments{
+    font-size: 24px;
+    grid-column: 2/3;
+    justify-self: center;
+}
+
+.section{
+    font-size: 30px;
+    grid-column: 2/3;
+    justify-self: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+
+footer{
+    font-size: 10px;
+    grid-column: 2/3;
+}
+
+#update_time {
+    font-size: 10px;
+    text-align: center;
+    /* grid-column: 2/3;
+    justify-self: center; */
+    margin: 0px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="/style.css" rel="stylesheet" type="text/css"  />
+        <!-- <style>
+            body{ background-color: brown;}
+        </style> -->
+    </head>
+    <body>
+        <img id="church_logo" src="/lds-logo-3080965043.png" />
+        <h1 id="ward_title"> Woodland Hills 2nd Ward </h1>
+        <h2 id="weekly_bulletin"> Weekly Bulletin </h2>
+        
+
+        <hr>
+        <h3 class="section"> Sacrament Meeting </h3>
+        <hr>
+        
+        <p class="sacrament_assignments"> <%= sacrament.date %></p>
+        <p class="sacrament_assignments"> Presiding Authority: <%= sacrament.presidingAuth %></p>
+        <p class="sacrament_assignments"> Conducting: <%= sacrament.conducting %></p>
+        <p class="sacrament_assignments"> Chorister: <%= sacrament.chorister %></p>
+        <p class="sacrament_assignments"> Organist: <%= sacrament.organist %></p>
+
+        <p class="sacrament_assignments"><b>Ward Business: </b> </p>
+
+        <p class="sacrament_assignments"><b>Opening Hymn: </b> <%= sacrament.openHymn %></p>
+        <p class="sacrament_assignments"><b>Opening Prayer: </b> <%= sacrament.openPrayer %></p>
+        <p class="sacrament_assignments"><b>Sacrament Hymn: </b> <%= sacrament.sacramentHymn %></p>
+        <p class="sacrament_assignments"><b>Sacrament: </b> Administered by the Priesthood holders</p>
+        <% 
+            let today = new Date();
+
+            if (sacrament.speaker1.toUpperCase().includes("TESTIMON") ) { 
+        %>
+            <p class="sacrament_assignments"><b>Bearing of Testimonies: </b></p>
+
+        <% } else { %>
+            <p class="sacrament_assignments"><b>Speakers: </b></p>
+            <% if (sacrament.speaker1) { %>
+                <p class="sacrament_assignments"><%= sacrament.speaker1 %></p>
+                <% if (sacrament.speaker2) { %>
+                    <p class="sacrament_assignments"><%= sacrament.speaker2 %></p>
+                <% } %>
+            <% } else { %>
+                    <p class="sacrament_assignments">To be announced</p>
+                <% } %>
+        <% } %>
+
+        <p class="sacrament_assignments"><b>Rest Hymn: </b> <%= sacrament.restHymn %></p>
+
+        <% if ((sacrament.speaker1) && (!sacrament.speaker1.toUpperCase().includes("TESTIMON")) ) { %>
+            <% if (sacrament.speaker3) { %>
+                    <p class="sacrament_assignments"><%= sacrament.speaker3 %></p>
+                <% } %>
+            <% if (sacrament.speaker4) { %>
+                    <p class="sacrament_assignments"><%= sacrament.speaker4 %></p>
+                <% } %>
+            <% if (sacrament.speaker5) { %>
+                    <p class="sacrament_assignments"><%= sacrament.speaker5 %></p>
+                <% } %>
+        <% } %>
+
+        <p class="sacrament_assignments"><b>Closing Hymn: </b> <%= sacrament.closeHymn %></p>
+        <p class="sacrament_assignments"><b>Closing Prayer </b> <%= sacrament.closePrayer %></p>
+        
+
+        
+        
+
+        <footer>
+            <p id="update_time"> Automatically updated on <%= updateDate %> </p>
+        </footer>
+    </body>
+</html>

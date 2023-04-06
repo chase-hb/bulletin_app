@@ -1,0 +1,25 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h1{
+    margin-bottom:50px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    background-color: darkslateblue;
+    padding:20px;
+    border-radius: 5px;
+    
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    color: rgb(32, 32, 32);
+    background-color: rgb(153, 144, 201);
+}

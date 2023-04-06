@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="/sac_form.css" rel="stylesheet" type="text/css"  />
+        <!-- <style>
+            body{ background-color: brown;}
+        </style> -->
+    </head>
+    <body>
+       
+        <h1>Sacrament Meeting Agendas</h1>
+        <a href="/test">View or edit scheduled meetings</a>
+
+        <h3 id="new_meeting_title">New meeting </h3>
+        <p>Optional fields such as the rest hymn can be left blank if they aren't needed</p>
+        <p>If all speakers are left blank, the program will assume that means it is fast & testimony meeting</p>
+        
+        <form id="new_meeting" action="/submitNewMeet" method="POST">
+            <label for="meeting_date">Date of Sacrament Meeting:</label>
+            <input type="date" name="meeting_date" required>
+
+            <label for="pres_auth">Presiding Authority:</label>
+            <input type="text" name="pres_auth" value="Bishop Taylor" pattern="[A-Z a-z]{1,20}"  title="Less than 20 characters, no numbers or specials" required>
+
+            <label for="conducting">Conducting:</label>
+            <input type="text" name="conducting" value="Josh Aikele" pattern="[A-Z a-z]{1,20}" title="Less than 20 characters, no numbers or specials" required>
+ 
+            <label for="chorister">Chorister:</label>
+            <input type="text" name="chorister" pattern="[A-Z a-z]{1,20}" title="Less than 20 characters, no numbers or specials" required>
+
+            <label for="organist">Organist:</label>
+            <input type="text" name="organist" pattern="[A-Z a-z]{1,20}" title="Less than 20 characters, no numbers or specials" required>
+
+            <label for="open_hymn">Opening Hymn</label>
+            <input type="text" name="open_hymn" pattern="[A-Z a-z0-9#]{1,50}" title="Less than 50 characters, '#' is only accepted special" required>
+
+            <label for="open_prayer">Opening Prayer</label>
+            <input type="text" name="open_prayer" pattern="[A-Za-z]{1,20}" title="Less than 20 characters, no numbers or specials" required>
+
+            <label for="sacrament_hymn">Sacrament Hymn</label>
+            <input type="text" name="sacrament_hymn" pattern="[A-Z a-z0-9#]{1,50}" title="Less than 50 characters, '#' is only accepted special" required>
+
+            <label for="speaker1">Speaker 1 </label>
+            <input type="text" name="speaker1" pattern="[A-Za-z]{1,20}" title="Less than 20 characters, no numbers or specials">
+
+            <label for="speaker2">Speaker 2</label>
+            <input type="text" name="speaker2" pattern="[A-Za-z]{1,20}" title="Less than 20 characters, no numbers or specials">
+
+            <label for="speaker3">Speaker 3</label>
+            <input type="text" name="speaker3" pattern="[A-Za-z]{1,20}" title="Less than 20 characters, no numbers or specials">
+
+            <label for="speaker4">Speaker 4</label>
+            <input type="text" name="speaker4" pattern="[A-Za-z]{1,20}" title="Less than 20 characters, no numbers or specials">
+
+            <label for="speaker5">Speaker 5</label>
+            <input type="text" name="speaker5" pattern="[A-Za-z]{1,20}" title="Less than 20 characters, no numbers or specials">
+
+            <label for="rest_hymn">Rest Hymn: </label>
+            <input type="text" name="rest_hymn" pattern="[A-Z a-z0-9#]{1,50}" title="Less than 50 characters, '#' is only accepted special">
+
+            <label for="close_hymn">Closing Hymn</label>
+            <input type="text" name="close_hymn" pattern="[A-Z a-z0-9#]{1,50}" title="Less than 50 characters, '#' is only accepted special" required>
+
+            <label for="close_prayer">Closing Prayer</label>
+            <input type="text" name="close_prayer" pattern="[A-Za-z]{1,20}" title="Less than 20 characters, no numbers or specials" required>
+
+            <input id="submit_button" type="submit" value="Submit">
+            
+        </form>
+
+
+        
+    </body>
+</html>
